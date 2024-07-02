@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/s3-listFiles/route.js", "src/app/listFiles/components/ListObject.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/s3-listFiles/route.js", "src/app/listFiles/components/ListObject.js", "src/app/upload/(form)/actions.js"],
   "exclude": ["node_modules"]
 }
