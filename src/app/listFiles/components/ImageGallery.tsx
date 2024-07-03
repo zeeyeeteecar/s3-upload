@@ -5,11 +5,11 @@ import {
   ListObjectsV2Command,
 } from "@aws-sdk/client-s3";
 
-
-
 const getImage = async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/s3-listFiles");
+    const response = await fetch(
+      "https://s3-upload-kappa.vercel.app/listFiles/api/s3-listFiles"
+    );
     if (!response.ok) {
       throw new Error("Failed to fetch image");
     }
@@ -30,7 +30,6 @@ export default async function ScreenshotImage() {
       ) : (
         <p>Loading image...</p>
       )}
-      
     </div>
   );
 }
