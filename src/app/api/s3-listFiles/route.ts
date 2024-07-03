@@ -9,7 +9,7 @@ type UrlDataType = {
   url: any;
 };
 
-export async function GET(): Promise<UrlDataType> {
+export async function GET(): Promise<Response> {
   try {
     const command = new GetObjectCommand({
       Bucket: process.env.NEXT_AWS_S3_BUCKET_NAME!,
