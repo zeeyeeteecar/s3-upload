@@ -6,7 +6,7 @@ import {
 } from "@aws-sdk/client-s3";
 
 type UrlDataType = {
-  url: string;
+  url: any;
 };
 
 export async function GET(): Promise<UrlDataType> {
