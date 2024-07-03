@@ -24,5 +24,5 @@ export default async function ListObject() {
   console.log("\nHere's a list of files in the bucket:");
   console.log(contentsList + "\n");
 
-  return <>{Contents && Contents.map((c) => ` • ${c.Key}`).join("\n")}</>;
+  return <>{Contents && Contents.map((c) => <li>{c.Key}</li>)}</>;
 }

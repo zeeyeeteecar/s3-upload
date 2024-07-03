@@ -26,7 +26,7 @@ export default async function ScreenshotImage() {
   return (
     <div>
       {imageUrl ? (
-        <Image src={imageUrl} alt="s3url" width="1200" height="1200" />
+        <Image src={imageUrl} alt="s3url" width="500" height="500" />
       ) : (
         <p>Loading image...</p>
       )}
