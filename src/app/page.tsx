@@ -17,6 +17,12 @@ export default function Home() {
         >
           Upload server side
         </Link>
+        <Link
+          href="/upload"
+          className="h-20 w-80 border-2 text-slate-600 rounded-full  grid place-items-center hover:bg-slate-50"
+        >
+          List Files
+        </Link>
       </div>
     </main>
   );
