@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextResponse ,NextRequest} from "next/server";
 import {
   S3Client,
   GetObjectCommand,
@@ -9,7 +9,7 @@ type UrlDataType = {
   url: any;
 };
 
-export async function GET(): Promise<Response> {
+export async function GET(request: NextRequest){
   try {
     const command = new GetObjectCommand({
       Bucket: process.env.NEXT_AWS_S3_BUCKET_NAME!,
