@@ -45,7 +45,7 @@ export async function uploadFile(prevState, formDate) {
 
     const buffer = Buffer.from(await file.arrayBuffer());
     await uploadFileToS3(buffer, file.name);
-    revalidatePath("/");
+    revalidatePath("/listFiles");
     return { status: "success", message: "File has been uploaded" };
   } catch (error) {
     return { status: "error", message: "Fail to upload file" };
