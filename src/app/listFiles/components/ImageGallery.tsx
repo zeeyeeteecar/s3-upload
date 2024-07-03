@@ -8,7 +8,7 @@ import {
 const getImage = async () => {
   try {
     const response = await fetch(
-      "https://s3-upload-kappa.vercel.app/listFiles/api/s3-listFiles"
+      "https://s3-upload-kappa.vercel.app/api/s3-listFiles"
     );
     if (!response.ok) {
       throw new Error("Failed to fetch image");
