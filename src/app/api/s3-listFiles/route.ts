@@ -5,16 +5,18 @@ import {
   ListObjectsV2Command,
 } from "@aws-sdk/client-s3";
 
+type UrlDataType = {
+  url: string;
+};
 
-
-export async function GET() {
+export async function GET(): Promise<UrlDataType> {
   try {
     const command = new GetObjectCommand({
-      Bucket: process.env.NEXT_AWS_S3_BUCKET_NAME,
+      Bucket: process.env.NEXT_AWS_S3_BUCKET_NAME!,
       Key: "Ad2024_2.png",
     });
 
-    const { Bucket, Key } = (command).input;
+    const { Bucket, Key } = (command as any).input;
     const url = `https://${Bucket}.s3.amazonaws.com/${Key}`;
 
     return new NextResponse(url);
